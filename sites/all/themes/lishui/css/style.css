@@ -1,0 +1,15 @@
+/**
+ * Place your custom styles here.
+ */
+.footer {
+    text-align: center;
+}
+
+.navbar-header {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.logo.navbar-btn img{
+    height: 75px;
+}
