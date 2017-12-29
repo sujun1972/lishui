@@ -104,7 +104,7 @@
                                 <?php print render($primary_nav); ?>
                             <?php endif; ?>
                             <?php if (!empty($secondary_nav)): ?>
-                                <?php print render($secondary_nav); ?>
+                                <?php // print render($secondary_nav); ?>
                             <?php endif; ?>
                             <?php if (!empty($page['navigation'])): ?>
                                 <?php print render($page['navigation']); ?>
@@ -143,59 +143,29 @@
                 <ul class="action-links"><?php print render($action_links); ?></ul>
             <?php endif; ?>
             <?php // print render($page['content']); ?>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolore dolores, dolorum eius enim
-                explicabo facere laboriosam libero necessitatibus, perspiciatis possimus praesentium rem repudiandae
-                tempora vel! Animi atque commodi consequuntur cumque delectus distinctio dolores, doloribus ea eius
-                eligendi, est eveniet harum nulla odit perferendis provident quidem, reiciendis repellendus repudiandae
-                sequi?
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquam aut consequatur cum,
-                cupiditate dignissimos dolorem eaque earum fugit ipsa ipsam iusto laboriosam minus nam natus nisi nobis
-                numquam perspiciatis possimus quas quo sed suscipit! Autem dicta id in itaque magnam omnis qui
-                temporibus velit. Accusamus beatae dolorum explicabo iste voluptas. Architecto fuga laudantium magni
-                nihil perferendis possimus provident saepe. Ad atque dolorem enim hic. Ad aliquid assumenda cum, debitis
-                dolor dolores eius est expedita illum inventore ipsum itaque labore molestias mollitia nobis obcaecati
-                porro quas quidem rerum voluptatibus. Assumenda beatae consequatur deserunt dicta distinctio doloremque
-                inventore laboriosam maxime quis. Accusamus asperiores dicta dolor eaque error, eveniet facere id minima
-                non odit perferendis quaerat quia sequi vitae voluptates. Amet deleniti dignissimos distinctio dolores
-                doloribus expedita, facere fugiat labore libero minima molestias qui ratione repudiandae temporibus
-                ullam! Deleniti eligendi illum in maiores nemo non repellat ullam voluptatibus. Accusamus culpa delectus
-                dicta dolorem ea error facilis libero maxime modi, nam nostrum possimus praesentium quasi quia,
-                similique totam vel! Aperiam asperiores aspernatur cupiditate debitis delectus doloremque doloribus eos
-                est illum incidunt minima modi molestias nesciunt obcaecati omnis optio porro quaerat quis, quo quod
-                reprehenderit suscipit temporibus ullam? Alias ea eos illo, impedit neque nihil odio possimus quo sint
-                suscipit ullam, vel. Aliquam amet consequuntur culpa excepturi facilis, fuga incidunt labore laudantium
-                maxime odit officia, quae repellat rerum, velit voluptate? Autem ea fugit nisi odio sequi suscipit
-                voluptatem? Accusantium aperiam assumenda cumque dolor ducimus et eum eveniet facilis, fugit itaque
-                laudantium molestiae nam nobis officia reiciendis soluta, ullam unde voluptates. A adipisci architecto
-                atque blanditiis consectetur corporis culpa cum distinctio doloremque dolorum eaque eos esse eveniet ex
-                fugit illo illum incidunt iste libero minima, minus molestiae neque nihil nobis, perspiciatis possimus
-                quaerat quas, ratione temporibus tenetur unde ut vel voluptatum. Nam, necessitatibus, vel!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquam aut consequatur cum,
-                cupiditate dignissimos dolorem eaque earum fugit ipsa ipsam iusto laboriosam minus nam natus nisi nobis
-                numquam perspiciatis possimus quas quo sed suscipit! Autem dicta id in itaque magnam omnis qui
-                temporibus velit. Accusamus beatae dolorum explicabo iste voluptas. Architecto fuga laudantium magni
-                nihil perferendis possimus provident saepe. Ad atque dolorem enim hic. Ad aliquid assumenda cum, debitis
-                dolor dolores eius est expedita illum inventore ipsum itaque labore molestias mollitia nobis obcaecati
-                porro quas quidem rerum voluptatibus. Assumenda beatae consequatur deserunt dicta distinctio doloremque
-                inventore laboriosam maxime quis. Accusamus asperiores dicta dolor eaque error, eveniet facere id minima
-                non odit perferendis quaerat quia sequi vitae voluptates. Amet deleniti dignissimos distinctio dolores
-                doloribus expedita, facere fugiat labore libero minima molestias qui ratione repudiandae temporibus
-                ullam! Deleniti eligendi illum in maiores nemo non repellat ullam voluptatibus. Accusamus culpa delectus
-                dicta dolorem ea error facilis libero maxime modi, nam nostrum possimus praesentium quasi quia,
-                similique totam vel! Aperiam asperiores aspernatur cupiditate debitis delectus doloremque doloribus eos
-                est illum incidunt minima modi molestias nesciunt obcaecati omnis optio porro quaerat quis, quo quod
-                reprehenderit suscipit temporibus ullam? Alias ea eos illo, impedit neque nihil odio possimus quo sint
-                suscipit ullam, vel. Aliquam amet consequuntur culpa excepturi facilis, fuga incidunt labore laudantium
-                maxime odit officia, quae repellat rerum, velit voluptate? Autem ea fugit nisi odio sequi suscipit
-                voluptatem? Accusantium aperiam assumenda cumque dolor ducimus et eum eveniet facilis, fugit itaque
-                laudantium molestiae nam nobis officia reiciendis soluta, ullam unde voluptates. A adipisci architecto
-                atque blanditiis consectetur corporis culpa cum distinctio doloremque dolorum eaque eos esse eveniet ex
-                fugit illo illum incidunt iste libero minima, minus molestiae neque nihil nobis, perspiciatis possimus
-                quaerat quas, ratione temporibus tenetur unde ut vel voluptatum. Nam, necessitatibus, vel!</p>
+            <?php echo views_embed_view('photo', $display_id = 'block_homepage');?>
         </section>
     </div>
 </div>
+
+<?php if (!empty($page['footer_first']) || !empty($page['footer_second']) || !empty($page['footer_third']) || !empty($page['footer_fourth'])): ?>
+    <footer class="footer_top <?php print $container_class; ?>">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <?php print render($page['footer_first']); ?>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <?php print render($page['footer_second']); ?>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <?php print render($page['footer_third']); ?>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <?php print render($page['footer_fourth']); ?>
+            </div>
+        </div>
+    </footer>
+<?php endif; ?>
 
 <?php if (!empty($page['footer'])): ?>
     <footer class="footer <?php print $container_class; ?>">
