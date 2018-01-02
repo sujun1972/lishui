@@ -176,3 +176,18 @@ function lishui_colorbox_imagefield($variables) {
 
     return l($image, $options['path'], $options);
 }
+
+function lishui_preprocess_user_profile(&$variables) {
+    // dsm($variables);
+    $account = $variables['elements']['#account'];
+    //Add the user ID into the user profile as a variable
+    $variables['user_id'] = $account->uid;
+    // Helpful $user_profile variable for templates.
+    foreach (element_children($variables['elements']) as $key) {
+        $variables['user_profile'][$key] = $variables['elements'][$key];
+    }
+
+    // Preprocess fields.
+    field_attach_preprocess('user', $account, $variables['elements'], $variables);
+
+}

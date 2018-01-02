@@ -79,11 +79,11 @@ article header .submitted {
 }
 
 .views-row.col-lg-4 {
-    margin: .5% 2% 2%;
-    padding: 0;
-    border: none;
-    background: none;
-    width: 46%;
+    /*margin: .5% 2% 2%;*/
+    /*padding: 0;*/
+    /*border: none;*/
+    /*background: none;*/
+    /*width: 20%;*/
 }
 
 /**
@@ -132,6 +132,31 @@ article header .submitted {
     margin: 0 0 15px;
 }
 
+.comment-form {
+    margin-bottom: 35px;
+}
+
+.comment {
+    position: relative;
+}
+
+.comment .comment-author {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+}
+
+.comment .user-picture {
+    margin-bottom: 15px;
+}
+
+.comment .detail {
+    padding-left: 110px;
+    min-height: 130px;
+}
+.comment .content {
+}
 .region-sidebar-second .block {
     padding: 15px;
     background-color: #eee;
@@ -268,4 +293,53 @@ article header .submitted {
 
 .feed-icon {
     display: none;
+}
+
+.more-link {
+    margin-top: 35px;
+}
+
+.view-id-photo .more-link {
+    text-align: center;
+}
+
+.user-info {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.user-info .picture {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.user-info .detail {
+    margin-left: 110px;
+    min-height: 110px;
+}
+
+
+.navbar-toggle {
+    position: absolute;
+    right: -5px;
+    top: 15px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .logo.navbar-btn img {
+        height: auto;
+        max-width: 75%;
+    }
+
+    .footer_top .col-xs-12 {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+    }
+
+    .footer_top .col-xs-12:last-child {
+        border-bottom: none;
+    }
 }
