@@ -134,6 +134,7 @@ article header .submitted {
 
 .comment-form {
     margin-bottom: 35px;
+    margin-left: 1px;
 }
 
 .comment {
@@ -288,6 +289,7 @@ article header .submitted {
 
 .footer_top .image.avatar img{
     border-radius: 50%;
+    width: 60px;
 }
 
 
@@ -342,4 +344,8 @@ article header .submitted {
     .footer_top .col-xs-12:last-child {
         border-bottom: none;
     }
+}
+
+.indented {
+    padding-left: 15px;
 }
