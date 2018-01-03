@@ -301,6 +301,10 @@ article header .submitted {
     margin-top: 35px;
 }
 
+.view-id-photo {
+    margin-bottom: 15px;
+}
+
 .view-id-photo .more-link {
     text-align: center;
 }
